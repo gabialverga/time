@@ -41,6 +41,16 @@ test('should parse 42 seconds as string', () => {
   expect(result).toBe(30);
 });
 
+test('should parse 20 seconds as string', () => {
+  const result = parse('20', SECONDS);
+  expect(result).toBe(20);
+});
+
+test('should parse 15 seconds as string', () => {
+  const result = parse('15', SECONDS);
+  expect(result).toBe(15);
+});
+
 test('shoud throw an error if no "value" is provided', () => {
   expect(() => {
     parse();
